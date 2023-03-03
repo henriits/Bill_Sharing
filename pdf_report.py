@@ -19,7 +19,7 @@ class PdfReport:
         pdf.add_page()
 
         # Add icon
-        pdf.image("house.png", w=30, h=30)
+        pdf.image("files/house.png", w=30, h=30)
 
         # Insert Title
         pdf.set_font(family="Times", size=24, style="B")
@@ -39,4 +39,4 @@ class PdfReport:
         pdf.cell(w=100, h=40, txt=flatmate2.name, border=0)
         pdf.cell(w=200, h=40, txt=flatmate2_pay, border=0, ln=1)
 
-        pdf.output(self.filename)
+        pdf.output(f"files/{self.filename}")
